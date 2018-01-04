@@ -61,7 +61,6 @@ router.get('/getFzPerson', function (req, res, next) {
     if (err) {
       console.log(err)
     } else {
-      console.log(data)
       // let descrData = []
       // let psnListData = []
       // for (let i = 0; i < data.length; i++) {
