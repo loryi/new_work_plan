@@ -64,7 +64,7 @@ router.get('/getFzPerson', function (req, res, next) {
       // console.log(data[0].list)
       let descrData = []
       let psnListData = []
-      for (let i; i < data.length; i++) {
+      for (let i = 0; i < data.length; i++) {
         descrData.push(data[i].list)
         psnListData.push(data[i].vo)
       }

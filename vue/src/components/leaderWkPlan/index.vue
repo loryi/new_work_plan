@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
   .index{
     position: absolute;
     width: 100%;
