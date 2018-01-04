@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="select-wrap fl">
     <div class="tit">
       <slot name="tit-txt"></slot>
@@ -59,29 +59,30 @@
 </template>
 
 <script>
-export default {
-  data(){
-    return {
-      listshow: false
-    }
-  },
-  methods:{
-    toggleSelect: function(){
-      this.listshow = !this.listshow;
+  export default {
+    data () {
+      return {
+        listshow: false
+      }
     },
-    selectFun: function(){
+    methods: {
+      toggleSelect: function () {
+        this.listshow = !this.listshow
+      },
+      selectFun: function () {
 
-    },
+      }
+    }
   }
-}
 </script>
 
 <style lang="css">
-  .select-wrap{
+  .select-wrap {
     position: relative;
     font-size: 0;
   }
-  .select-wrap .tit{
+
+  .select-wrap .tit {
     display: inline-block;
     vertical-align: middle;
     font-size: 12px;
@@ -89,7 +90,8 @@ export default {
     line-height: 44px;
     margin: 0 20px;
   }
-  .select-wrap .select-box{
+
+  .select-wrap .select-box {
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -101,18 +103,22 @@ export default {
     cursor: pointer;
     line-height: 22px;
   }
-  .select-wrap .select-box span, .select-wrap .select-list span{
+
+  .select-wrap .select-box span, .select-wrap .select-list span {
     font-size: 12px;
     display: inline-block;
     line-height: 20px;
   }
-  .select-wrap .select-box .week-num, .select-wrap .select-list .week-num{
+
+  .select-wrap .select-box .week-num, .select-wrap .select-list .week-num {
     color: #333;
   }
-  .select-wrap .select-box .date-num, .select-wrap .select-list .date-num{
+
+  .select-wrap .select-box .date-num, .select-wrap .select-list .date-num {
     color: #999;
   }
-  .select-wrap .select-box i{
+
+  .select-wrap .select-box i {
     position: absolute;
     width: 7px;
     height: 4px;
@@ -120,10 +126,12 @@ export default {
     top: 9px;
     right: 6px;
   }
-  .select-wrap .select-box:hover i{
+
+  .select-wrap .select-box:hover i {
     background-position: 0 -7px;
   }
-  .select-wrap .select-list{
+
+  .select-wrap .select-list {
     position: absolute;
     top: 35px;
     left: 64px;
@@ -134,12 +142,14 @@ export default {
     background-color: #fff;
     border-radius: 3px;
   }
-  .select-wrap .select-list li{
+
+  .select-wrap .select-list li {
     /*text-align: center;*/
     padding: 2px 0 2px 10px;
     cursor: pointer;
   }
-  .select-wrap .select-list li:hover{
+
+  .select-wrap .select-list li:hover {
     background-color: #f5f5f5;
   }
 </style>
