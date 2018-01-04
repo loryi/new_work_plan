@@ -61,16 +61,14 @@ router.get('/getFzPerson', function (req, res, next) {
     if (err) {
       console.log(err)
     } else {
-      // console.log(data[0].list)
-      let descrData = []
-      let psnListData = []
-      for (let i = 0; i < data.length; i++) {
-        descrData.push(data[i].list)
-        psnListData.push(data[i].vo)
-      }
+      // let descrData = []
+      // let psnListData = []
+      // for (let i = 0; i < data.length; i++) {
+      //   descrData.push(data[i].list)
+      //   psnListData.push(data[i].vo)
+      // }
       res.send({
-        descrData,
-        psnListData
+        data: data
       })
     }
   })
