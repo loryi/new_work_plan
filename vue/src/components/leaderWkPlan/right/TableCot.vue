@@ -23,17 +23,8 @@
       'PsnListData'
     ],
     data () {
-      return {
-        i: 0
-      }
+      return { }
     }
-    // ,
-    // methods: {
-    //   a ($index) {
-    //     this.in = $index
-    //     console.log(this.in)
-    //   }
-    // }
   }
 </script>
 
