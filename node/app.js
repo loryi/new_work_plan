@@ -36,17 +36,17 @@ app.use(session({
 }))
 
 app.use(function (req, res, next) {
-  let x = req.headers['referer']
-  if ((typeof x) !== 'undefined') {
-    req.zd = zd
-    next()
-  } else {
-    let err = new Error('Permission denied')
-    err.status = 666
-    next(err)
-  }
-  // req.zd = zd
-  // next()
+  // let x = req.headers['referer']
+  // if ((typeof x) !== 'undefined') {
+  //   req.zd = zd
+  //   next()
+  // } else {
+  //   let err = new Error('Permission denied')
+  //   err.status = 666
+  //   next(err)
+  // }
+  req.zd = zd
+  next()
 })
 
 app.use('/', index)
