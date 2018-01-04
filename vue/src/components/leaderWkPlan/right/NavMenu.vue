@@ -3,7 +3,8 @@
     <div class="nav-box">
       <el-tabs v-model="activeName" type="card" editable>
         <el-tab-pane :key="item.id" v-for="(item, index) in groupData" :label="item.xzmc" :name="index.toString()">
-          <TableCot :PsnListData='psnListData' :DescrData='descrData'></TableCot>
+          <TableCot :PsnListData='psnListData' :DescrData='descrData'>
+          </TableCot>
         </el-tab-pane>
       </el-tabs>
     </div>
@@ -43,7 +44,7 @@ export default {
       const url = '/leaderWkPlan/getFzPerson?xzid=' + this.firstGroupId
       this.$axios.get(url).then(
         response => {
-          this.personData = response.data.descrData
+          this.descrData = response.data.descrData
           this.psnListData = response.data.psnListData
         },
         err => {
@@ -81,7 +82,7 @@ export default {
     position: absolute;
     overflow: auto;
     width: 100%;
-    top: 78px;
+    top: 85px;
     bottom: 0;
     left: 0;
   }
