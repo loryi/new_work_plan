@@ -2,22 +2,24 @@
   <div class="index">
     <Left></Left>
     <Right></Right>
+    <!--<PopView></PopView>-->
   </div>
 </template>
 
 <script>
 import Left from './left/Left.vue'
 import Right from './right/Right.vue'
-
+import PopView from './PopView.vue'
 export default {
   components: {
     Left,
-    Right
+    Right,
+    PopView
   }
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
   .index{
     position: absolute;
     width: 100%;
